@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <div> 
+        <form action="strore" method="post">
+            <label for="campo-marca">Marca</label>
+            <input type="text" name="balao.Marca" id="campo-marca">
+            <label for="campo-preco">Preco</label>
+            <input type="text" name="balao.Preco" id="campo-preco">
+            <label for="campo-quantidade">Quantidade</label>
+            <input type="number" name="balao.Quantidade" id="campo-quantidade">
+            <label for="campo-cor">Cor</label>
+            <select name="balao.Cor" id="campo-cor">
+                <option>Vermelho</option><option>Uva</option>
+                <option>Rosê</option><option>Fuschia</option>
+            </select>
+            <label for="campo-tamanho">Tamanho</label>
+            <input type="text" name="balao.Tamanho" id="campo-tamanho" placeholder="Digite um tamanho">
+            <label for="campo-cheio">cheio</label>
+               <input type="radio" name="balao.Cheio" id="campo-cheio" value="true">
+            <input type="radio" name="balao.Vazio" id="campo-vazio" value="false">
+            <label for="campo-vazio"> Vazio</label>
+            
+            <input type="submit" value="cadastrar">
+        </form>
+    </div>
+</body>
+</html>

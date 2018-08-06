@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+    <div> 
+        <form action="/Recrutadora/Update" method="post">
+            <input type="hidden" name="recrutadora.Id" value="@ViewBag.Recrutadora.Id">
+            <div>
+                <label for="campo-nome">Nome</label>
+                <input type="text" name="recrutadora.Nome" id="campo-nome" value="@ViewBag.Recrutadora.Nome">
+            </div>
+            <div>
+                <label for="campo-cpf">CPF</label>
+                <input type="text" name="recrutadora.Cpf" id="campo-cpf" value="@ViewBag.Recrutadora.CPF">
+            </div>
+            <div>
+                <label for="campo-salario"> Salário</label>
+                <input type="number" name="recrutadora.Salario" id="campo-salario" value="@ViewBag.Recrutadora.Salario">
+            </div>
+            <div>
+                <label for="campo-tempo-empresa">Tempo Empresa</label>
+                <select id="campo-tempo-empresa" name="recrutadora.TempoEmpresa">
+                    @for (int i = 0; i < 7; i++)
+                    {
+                        if (i == @ViewBag.Recrutadora.TempoEmpresa)
+                        {
+                            <option value="@i" selected="selected">@i anos</option>
+                        }
+                        else
+                        {
+                            <option value="@i">@i anos</option>
+                        }
+                    }
+                    
+                </select>
+            </div>
+            <input type="submit" value="salvar">
+        </form>
+    </div>
+</body>
+</html>

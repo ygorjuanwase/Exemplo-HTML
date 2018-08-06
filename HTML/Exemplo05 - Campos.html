@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo 05 - Campos</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <form action="paraondevai.html" method="post">
+    
+        <div>
+       <label for="campo-nome">Nome</label>
+        <input type="text" id="campo-nome" name="nome">
+        </div>
+        <div>
+            <label for="campo-idade">Idade</label>
+            <input type="number" id="campo-idade" min="10" max="20" name="idade">
+        </div>
+        <div>
+            <label for="campo-data-nascimento">Data de nascimento</label>
+            <input type="date" id="campo-data-nascimento" name="data-nascimento">
+
+        </div>
+
+        <div>
+            <label for="campo-arquivo">Arquivo</label>
+            <input type="file" id="campo-arquivo" name="arquivo">
+        </div>
+
+        <div>
+            <label for="campo-senha">Senha</label>
+            <input type="password" id="campo-senha" name="senha">
+        </div>
+
+         <div>
+            <label for="campo-email">E-mail</label>
+            <input type="email" id="campo-email" name="email">
+        </div>
+        
+        <div>
+        
+        <input type="radio" id="campo-homem" name="campo-sexo">
+            <label for="campo-homem">
+            Homem</label>
+            <input type="radio" id="campo-mulher" name="campo-sexo">
+            <label for="campo-mulher">
+            Mulher</label>
+            
+        
+        </div>
+        
+        <div>
+         <input type="checkbox" id="campo-azul" name="campo-azul">
+            <label for="campo-azul">
+            Azul</label>
+            
+             <input type="checkbox" id="campo-marrom" name="campo-marrom">
+            <label for="campo-marrom">
+            Castanho</label>
+        </div>
+        
+        <div>
+        <label for="campo-serie">Série</label>
+            <select name="serie" id="campo-serie">
+                <option checked="checked">Selecione uma opção</option>
+            <option value="1">1° Ano </option>
+                <option value="2">2° Ano</option>
+                <option value="3">3° Ano</option>
+                <option value="4">4° Ano</option>
+            
+            </select>
+        </div>
+        
+        <div>
+        <label for="campo-descricao">Descrição</label>
+            <textarea id="campo-descricao" name="descricao"></textarea>
+        </div>
+
+        <div>
+
+            <input type="reset" id="Limpar">
+            <input type="submit" id="Cadastrar">
+        </div>
+        
+        
+        </form>
+    
+    
+    
+    
+</body>
+
+</html>

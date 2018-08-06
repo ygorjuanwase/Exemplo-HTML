@@ -17,13 +17,34 @@ namespace exemploMVC02.Controllers
             ViewBag.Recrutadoras = recrutadoras;
             return View();
         }
-        public ActionResult Cadadstro()
+        public ActionResult Cadastro()
         {
             return View();
         }
-        public ActionResult Editar()
+        public ActionResult Editar(int id)
         {
+
+            Recrutadora recrutadora = new RecrutadoraRepositorio().ObterPeloId(id);
+            ViewBag.Recrutadora = recrutadora;
             return View();
+        }
+
+        public ActionResult Excluir(int id)
+        {
+           bool apagado = new RecrutadoraRepositorio().Excuir(id);
+           return null;
+        }
+
+        public ActionResult Store(Recrutadora recrutadora)
+        {
+            int identificador = new RecrutadoraRepositorio().Cadastrar(recrutadora);
+            return RedirectToAction("Editar", new { id = identificador});
+        }
+
+        public ActionResult Update(Recrutadora recrutadora)
+        {
+            bool alterado = new RecrutadoraRepositorio().Alterar(recrutadora);
+            return null;
         }
     }
 }

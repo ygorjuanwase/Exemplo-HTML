@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadadstro</title>
+</head>
+<body>
+    <div> 
+        <form action="/Recrutadora/Strore" method="post">
+            <div><label for="campo-nome">Nome</label>
+            <input type="text" name="recrutadora.Nome" id="campo-nome">
+            </div>
+            <div>
+                <label for="campo-cpf">CPF</label>
+                <input type="text" name="recrutadora.Cpf" id="campo-cpf">
+            </div>
+            <div>
+                <label for="campo-salario"> Salário</label>
+                <input type="text" name="recrutadora.Salario" id="campo-salario">
+            </div>
+            <div>
+                <label for="campo-tempo-empresa">Tempo Empresa</label>
+                <select id="campo-tempo-empresa" name="recrutadora.TempoEmpresa">
+                    <option value="0">0 anos</option>
+                    <option value="1">1 anos</option>
+                    <option value="2">2 anos</option>
+                    <option value="3">3 anos</option>
+                    <option value="4">4 anos</option>
+                    <option value="5">5 anos</option>
+                    <option value="6">6 anos</option>
+                </select>
+            </div>
+            <input type="submit" value="salvar">
+        </form>
+    </div>
+</body>
+</html>
